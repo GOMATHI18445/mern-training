@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>RESUME</h1>
+<h3>CONTACT</h3>
+<p>PHONE:6374971210</p>
+<p>E-Mail:gomathigandhi2005@gmail.com</p>
+<p>Address:23,Thuduppathi,Erode-638057</p>
+<h3>CAREER OBJECTIVE</h3>
+<P>To secure employment with a company that offers a consistently positive atmosphere to learn and to implement new ideas for the betterment of the company
+<h3>EDUCATIONAL QUALIFICATION</h3>
+<ul>
+    <li> Bachelor of Engineering in Civil completed in 2027 with 8.2 CGPA at Kongu Engineering College(Autonomous),Perundurai.</li>
+    <li> HSC completed in 2023 with 76% at Govt Higher Secondary School, Thuduppathi.</li>
+    <li> SSLC completed in 2021 at Govt Higher Secondary School, Thuduppathi.</li>
+</ul>
+<h3>SOFTWARE KNOWLEDGE</h3>
+<ul>
+    <li>AutoCAD</li>
+    <li>Etabs</li>
+    <li>Sketchup</li>
+    <li>Matlab</li>
+    <li>MS Office</li>
+</ul>
+<h3>AREAS OF INTEREST</h3>
+<ul>
+    <li>Structural Engineering</li>
+    <li>Construction Management</li>
+</ul>
+<h3>SKILLS</h3>
+<ul>
+    <li>Punctuality</li>
+    <li>Time management</li>
+    <li>Team work</li>
+    <li>Leadership</li>
+</ul>
+<h3>ACIHEVEMENTS</h3>
+<ul>
+    <li>Secured 2nd place in CHARCOAL ELEGANCE at KONGU ENGINEERING COLLEGE, PERUNDURAI</li>
+    <li>Secured 3rd place in FOOD CARVING at KONGU ENGINEERING COLLEGE, PERUNDURAI</li>
+    <li>Secured 3rd place in PET PHOTO FEST at KONGU ENGINEERING COLLEGE, PERUNDURAI</li>
+    <li>Secured 3rd place in NATURE PHOTOGRAPY at KONGU ENGINEERING COLLEGE, PERUNDURAI</li>
+</ul>
+<h3>MEMBERSHIP</h3>
+<ul>
+    <li>ISTE member at Kongu Engineering College, Perundurai since 2024</li>
+    <li>ACI member at Kongu Engineering College, Perundurai since 2024</li>
+    <li>PASUMAIVANAM CLUB member at Kongu Engineering College, Perundurai since 2024</li>
+</ul>
+<h3>PERSONAL PROFILE</h3>
+<ul>
+    <li>FATHER's NAME : GANDHI R</li>
+    <li>MOTHER's NAME : SUDHA G</li>
+    <li>BLOOD GROUP : O +ve</li>
+    <li>DOB : 27.09.2005</li>
+    <li>LANGUAGES KNOWN : TAMIL, ENGILISH</li>
+    <li>NATIONALITY : INDIAN</li>
+</ul>
+</body>
+</html>
+
