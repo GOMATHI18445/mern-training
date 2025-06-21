@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input with IST and Inline Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 250px;
+            font-size: 1em;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #messageBox {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e7f3fe;
+            color: #0b5394;
+            border-left: 4px solid #2196F3;
+            display: none; /* hidden initially */
+        }
+
+        #timerBox {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #fff;
+            border-left: 5px solid #2196F3;
+            font-size: 1.5em;
+            color: #333;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Your Name:</h2>
+    <input type="text" id="nameInput" placeholder="Your name here..." />
+    <button onclick="submitForm()">Submit</button>
+
+    <div id="messageBox"></div>
+
+    <div id="timerBox">
+        Indian Time (IST): <span id="timeDisplay">--:--:--</span>
+    </div>
+
+    <script>
+        // Function to get current IST time
+        function getIndianTime() {
+            const now = new Date();
+            const istOffset = 5.5 * 60 * 60 * 1000;
+            const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+            const ist = new Date(utc + istOffset);
+            return ist.toLocaleTimeString('en-IN', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+            });
+        }
+
+        // Update IST timer
+        function updateTimer() {
+            document.getElementById("timeDisplay").textContent = getIndianTime();
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // Show message below input
+        function submitForm() {
+            const name = document.getElementById("nameInput").value.trim();
+            const messageBox = document.getElementById("messageBox");
+
+            if (name === "") {
+                messageBox.textContent = "⚠️ Please enter your name.";
+                messageBox.style.backgroundColor = "#ffe6e6";
+                messageBox.style.color = "#d8000c";
+                messageBox.style.borderLeft = "4px solid #d8000c";
+                messageBox.style.display = "block";
+                return;
+            }
+
+            const time = getIndianTime();
+            messageBox.innerHTML = `👋 Hello, <strong>${name}</strong>! The current Indian time is <strong>${time}</strong>.`;
+            messageBox.style.backgroundColor = "#e7f3fe";
+            messageBox.style.color = "#0b5394";
+            messageBox.style.borderLeft = "4px solid #2196F3";
+            messageBox.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

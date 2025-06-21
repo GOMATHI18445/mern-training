@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input + Submit + IST Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 250px;
+            font-size: 1em;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #timerBox {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-left: 5px solid #2196F3;
+            font-size: 1.5em;
+            color: #333;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Your Name:</h2>
+    <input type="text" id="nameInput" placeholder="Your name here..." />
+    <button onclick="submitForm()">Submit</button>
+
+    <div id="timerBox">
+        Indian Time (IST): <span id="timeDisplay">--:--:--</span>
+    </div>
+
+    <script>
+        // Get IST time
+        function getIndianTime() {
+            const now = new Date();
+            const istOffset = 5.5 * 60 * 60 * 1000; // IST = UTC +5:30
+            const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+            const istTime = new Date(utc + istOffset);
+            return istTime.toLocaleTimeString('en-IN', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+            });
+        }
+
+        // Update timer every second
+        function updateTimer() {
+            document.getElementById("timeDisplay").textContent = getIndianTime();
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer(); // Initial call
+
+        // Handle Submit
+        function submitForm() {
+            const name = document.getElementById("nameInput").value.trim();
+            if (name === "") {
+                alert("Please enter your name.");
+                return;
+            }
+
+            const time = getIndianTime();
+            alert("Hello, " + name + "! The current Indian time is " + time + ".");
+        }
+    </script>
+
+</body>
+</html>
